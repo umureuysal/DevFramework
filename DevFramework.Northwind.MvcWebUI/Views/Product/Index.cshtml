@@ -1,0 +1,26 @@
+﻿@model DevFramework.Northwind.MvcWebUI.Models.ProductViewModel
+
+@{ 
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<DOCTYPE! html>
+
+
+    <div>
+        @foreach (var product in Model.Products)
+        {
+        <div class="item">
+            <h3>@product.ProductName</h3> 
+            <h3>@product.UnitPrice</h3>
+            <hr />
+        </div>
+        <br />
+        }
+    <div class="pager">
+        @Html.Pager((object)Model.PagingInfo)
+
+    </div>
+    </div>
+
+
